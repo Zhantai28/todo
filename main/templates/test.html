@@ -1,17 +1,47 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 18</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css'%}" />
+    <link rel="stylesheet" href="{% static 'styles/checkbox.css'%}" />
 </head>
 
 <body>
-    <h2>Тестовая страница</h2>
-    {% for todo in todo_list%}
-        <h4>{{ todo.text }} - {{ todo.date }}</h4>
-    {% endfor %}
+    <section>
+        <div class="create-container">
+          <input
+            type="text"
+            class="create-input"
+            placeholder="Напишите сюда новую задачу"
+          />
+          <button class="create-button">Добавить</button>
+        </div>
+        <div class="todo-container">
+
+            {% for todo in todo_list %}
+                <div class="todo-item">
+                    <div class="todo-item-header">
+                    <label class="checkbox-container">
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                    </label>
+                    <h4>{{ todo.text }}</h4>
+                    </div>
+                    <div class="todo-item-footer">
+                    <p>{{ todo.date }}</p>
+                    <div class="action-button">
+                        <img src="./images/white.svg" alt="" />
+                        <img src="./images/trashcan.svg" alt="" />
+                    </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+      </section>
 </body>
 
 </html>
