@@ -9,6 +9,9 @@
 
 <body>
     <h2>Тестовая страница</h2>
+    {% for todo in todo_list%}
+        <h4>{{ todo.text }} - {{ todo.date }}</h4>
+    {% endfor %}
 </body>
 
 </html>

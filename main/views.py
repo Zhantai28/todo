@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from .models import ToDo
 
 
 def homepage(request):
@@ -6,20 +7,9 @@ def homepage(request):
 
 
 def test(request):
-    return render(request, 'test.html')
+    todo_list = ToDo.objects.all()
+    return render(request, 'test.html', {"todo_list": todo_list})
 
 
 def second(request):
     return HttpResponse('test 2 page')
-
-
-def create(request):
-    return render(request, 'create.html')
-
-
-def update(request):
-    return render(request, 'update.html')
-
-
-def delete(request):
-    return render(request, 'delete.html')
