@@ -11,9 +11,20 @@
         <a href="http://127.0.0.1:8000/book-add/" class="btn btn-secondary">Добавить книгу</a>
         {% for book in book_list %}
             <hr>
-                <p>Название: {{ book.title }}</p>
-                <p>Подзаголовок: {{ book.subtitle }}</p>
-                <p>Описание: {{ book.description }}</p>
+                <div class="
+                {% if book.is_favorite%}
+                    text-success border border-warning
+                {% else %}
+                    
+                {% endif %}
+                ">
+                    <p>Название: {{ book.title }}</p>
+                    <p>Подзаголовок: {{ book.subtitle }}</p>
+                    <p>Описание: {{ book.description }}</p>
+                    <a href="{% url 'delete-book' book.id %}" class="btn btn-danger">Удалить</a>
+                    <a href="{% url 'favorite-book' book.id %}" class="btn btn-warning">Избранное</a>
+                    <a href="{% url 'info-book' book.id %}" class="btn btn-info">Посмотреть детали книги</a>
+                </div>
             <br>
         {% endfor %}
     </div>

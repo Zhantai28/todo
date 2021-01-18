@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали книги</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+            <p>Название: {{ book.title }}</p>
+            <p>Подзаголовок: {{ book.subtitle }}</p>
+            <p>Описание: {{ book.description }}</p>
+            <p>Цена: {{ book.price }}</p>
+            <p>Жанр: {{ book.genre }}</p>
+            <p>Автор: {{ book.author }}</p>
+            <p>Год выхода книги: {{ book.year }}</p>
+            <p>Добавление книги на сайт: {{ book.date }}</p>
+            <a href="http://127.0.0.1:8000/book-store/" class="btn btn-outline-primary">Назад</a>
+    </div>
+</body>
+</html>

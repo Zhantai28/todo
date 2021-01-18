@@ -57,3 +57,25 @@ def mark_todo(request, id):
         todo.is_favorite = True
     todo.save()
     return redirect(test)
+
+
+def delete_book(request, id):
+    book = BookStore.objects.get(id=id)
+    book.delete()
+
+    return redirect(bookStore)
+
+
+def favorite_book(request, id):
+    book = BookStore.objects.get(id=id)
+    if book.is_favorite:
+        book.is_favorite = False
+    else:
+        book.is_favorite = True
+    book.save()
+    return redirect(bookStore)
+
+
+def book_info(request, id):
+    book = BookStore.objects.get(id=id)
+    return render(request, 'book-detail.html', {'book': book})
