@@ -38,7 +38,7 @@
                     <p>{{ todo.date }}</p>
                     <div class="action-button">
                         <img src="{% static 'images/white.svg' %}" alt="" />
-                        <img src="{% static 'images/trashcan.svg' %}" alt="" />
+                        <a href="{% url 'delete-todo' todo.id %}"><img src="{% static 'images/trashcan.svg' %}" alt="" /></a>
                     </div>
                     </div>
                 </div>

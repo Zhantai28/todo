@@ -22,8 +22,7 @@ def bookStore(request):
 
 def add_todo(request):
     form = request.POST
-    text = form['todo_text']
-    todo = ToDo(text=text)
+    todo = ToDo(text=form['todo_text'])
     todo.save()
 
     return redirect(test)
@@ -36,7 +35,15 @@ def book_add(request):
 def add_book(request):
     form = request.POST
     bookstor = BookStore(title=form['book-title'], subtitle=form['book-subtitle'],
-                         description=form['book-description'], price=form['book-price'], genre=form['book-genre'], author=form['book-author'], year=form['book-year'])
+                         description=form['book-description'], price=form['book-price'],
+                         genre=form['book-genre'], author=form['book-author'], year=form['book-year'])
     bookstor.save()
 
     return redirect(bookStore)
+
+
+def delete_todo(request, id):
+    todo = ToDo.objects.get(id=id)
+    todo.delete()
+
+    return redirect(test)
