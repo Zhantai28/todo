@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Книжный магазин</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
-    {% for book in book_list %}
-        <hr>
-            <p>{{ book.title }}</p>
-            <p>{{ book.subtitle }}</p>
-            <p>Описание: {{ book.description }}</p>
-        <br>
-    {% endfor %}
+    <div class='container'>
+        <a href="http://127.0.0.1:8000/book-add/" class="btn btn-secondary">Добавить книгу</a>
+        {% for book in book_list %}
+            <hr>
+                <p>Название: {{ book.title }}</p>
+                <p>Подзаголовок: {{ book.subtitle }}</p>
+                <p>Описание: {{ book.description }}</p>
+            <br>
+        {% endfor %}
+    </div>
 </body>
 </html>

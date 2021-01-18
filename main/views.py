@@ -27,3 +27,16 @@ def add_todo(request):
     todo.save()
 
     return redirect(test)
+
+
+def book_add(request):
+    return render(request, 'books-add.html')
+
+
+def add_book(request):
+    form = request.POST
+    bookstor = BookStore(title=form['book-title'], subtitle=form['book-subtitle'],
+                         description=form['book-description'], price=form['book-price'], genre=form['book-genre'], author=form['book-author'], year=form['book-year'])
+    bookstor.save()
+
+    return redirect(bookStore)
