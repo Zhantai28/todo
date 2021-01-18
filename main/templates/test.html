@@ -26,7 +26,11 @@
         </div>
         <div class="todo-container">
             {% for todo in todo_list %}
-                <div class="todo-item">
+                <div class="todo-item 
+                    {% if todo.is_favorite %}
+                        marked
+                    {% endif %}
+                ">
                     <div class="todo-item-header">
                     <label class="checkbox-container">
                         <input type="checkbox" />
@@ -37,8 +41,12 @@
                     <div class="todo-item-footer">
                     <p>{{ todo.date }}</p>
                     <div class="action-button">
-                        <img src="{% static 'images/white.svg' %}" alt="" />
-                        <a href="{% url 'delete-todo' todo.id %}"><img src="{% static 'images/trashcan.svg' %}" alt="" /></a>
+                        {% if todo.is_favorite %}
+                            <a href="{% url 'mark-todo' todo.id %}"><img src="{% static './images/yellow.svg' %}" alt="" /></a>
+                        {% else %}
+                            <a href="{% url 'mark-todo' todo.id %}"><img src="{% static './images/white.svg' %}" alt="" /></a>
+                        {% endif %}
+                        <a href="{% url 'delete-todo' todo.id %}"><img src="{% static './images/trashcan.svg' %}" alt="" /></a>
                     </div>
                     </div>
                 </div>
