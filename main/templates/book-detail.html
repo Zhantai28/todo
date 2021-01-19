@@ -16,7 +16,7 @@
             <p>Автор: {{ book.author }}</p>
             <p>Год выхода книги: {{ book.year }}</p>
             <p>Добавление книги на сайт: {{ book.date }}</p>
-            <a href="http://127.0.0.1:8000/book-store/" class="btn btn-outline-primary">Назад</a>
+            <a href="{% url 'bookstore' %}" class="btn btn-outline-primary">Назад</a>
     </div>
 </body>
 </html>

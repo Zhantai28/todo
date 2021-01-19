@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 18</title>
+    <title>Todo</title>
     <link rel="stylesheet" href="{% static 'styles/styles.css'%}" />
     <link rel="stylesheet" href="{% static 'styles/checkbox.css'%}" />
 </head>
@@ -42,7 +42,7 @@
                         />
                         <span class="checkmark"></span>
                     </label>
-                    <h4><a href="{% url 'close-todo' todo.id%}">{{ todo.text }}</a></h4>
+                    <h4><a href="{% url 'close-todo' todo.id %}">{{ todo.text }}</a></h4>
                     </div>
                     <div class="todo-item-footer">
                     <p>{{ todo.date }}</p>
