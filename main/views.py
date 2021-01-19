@@ -79,3 +79,10 @@ def favorite_book(request, id):
 def book_info(request, id):
     book = BookStore.objects.get(id=id)
     return render(request, 'book-detail.html', {'book': book})
+
+
+def close_todo(request, id):
+    todo = ToDo.objects.get(id=id)
+    todo.is_closed = not todo.is_closed
+    todo.save()
+    return redirect(test)

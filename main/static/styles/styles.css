@@ -12,14 +12,17 @@ section {
   flex-direction: column;
   align-items: center;
 }
+
 .create-container {
   width: 80%;
 }
+
 .create-input {
   padding: 12px 20px;
   font-size: 18px;
   width: 80%;
 }
+
 .create-button {
   padding: 12px 20px;
   background-color: #ce93d8;
@@ -76,6 +79,11 @@ section {
   font-size: 18px;
   font-family: sans-serif;
 }
+
+.todo-item-header h4 a {
+  text-decoration: none;
+}
+
 .todo-item-footer {
   display: flex;
   justify-content: space-between;
