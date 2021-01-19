@@ -11,10 +11,6 @@ def test(request):
     return render(request, 'todo.html', {"todo_list": todo_list})
 
 
-def second(request):
-    return HttpResponse('test 2 page')
-
-
 def bookStore(request):
     book_list = BookStore.objects.all()
     return render(request, 'books.html', {"book_list": book_list})
