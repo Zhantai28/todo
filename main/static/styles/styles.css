@@ -38,6 +38,14 @@ section {
   border: 1px white #ce93d8;
   box-shadow: 2px 2px 2px 2px #fce4ec;
 }
+.main-page {
+  border: 1px solid black;
+  text-decoration: none;
+  color: white;
+  padding: 4px;
+  border-radius: 0.25rem;
+  background-color: black;
+}
 .todo-container {
   padding: 30px 20px;
   display: flex;

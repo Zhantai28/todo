@@ -1,122 +1,17 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 18</title>
-    <link rel="stylesheet" href="{% static 'styles/styles.css'%}" />
-    <link rel="stylesheet" href="{% static 'styles/checkbox.css'%}" />
-  </head>
-  <body>
-    <section>
-      <div class="create-container">
-        <input
-          type="text"
-          class="create-input"
-          placeholder="Напишите сюда новую задачу"
-        />
-        <button class="create-button">Добавить</button>
-      </div>
-      <div class="todo-container">
-        <div class="todo-item">
-          <div class="todo-item-header">
-            <label class="checkbox-container">
-              <input type="checkbox" />
-              <span class="checkmark"></span>
-            </label>
-            <h4>Купить молоко</h4>
-          </div>
-          <div class="todo-item-footer">
-            <p>3.1.2021 <span>22:16</span></p>
-            <div class="action-button">
-              <img src="./images/white.svg" alt="" />
-              <img src="./images/trashcan.svg" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="todo-item marked">
-          <div class="todo-item-header">
-            <label class="checkbox-container">
-              <input type="checkbox" />
-              <span class="checkmark"></span>
-            </label>
-            <h4>Купить молоко</h4>
-          </div>
-          <div class="todo-item-footer">
-            <p>3.1.2021 <span>22:16</span></p>
-            <div class="action-button">
-              <img src="./images/yellow.svg" alt="" />
-              <img src="./images/trashcan.svg" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="todo-item done">
-          <div class="todo-item-header">
-            <label class="checkbox-container">
-              <input type="checkbox" checked />
-              <span class="checkmark"></span>
-            </label>
-            <h4>Купить молоко</h4>
-          </div>
-          <div class="todo-item-footer">
-            <p>3.1.2021 <span>22:16</span></p>
-            <div class="action-button">
-              <img src="./images/white.svg" alt="" />
-              <imgс src="./images/trashcan.svg" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="todo-item marked">
-          <div class="todo-item-header">
-            <label class="checkbox-container">
-              <input type="checkbox" />
-              <span class="checkmark"></span>
-            </label>
-            <h4>Купить молоко</h4>
-          </div>
-          <div class="todo-item-footer">
-            <p>3.1.2021 <span>22:16</span></p>
-            <div class="action-button">
-              <img src="./images/yellow.svg" alt="" />
-              <img src="./images/trashcan.svg" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="todo-item">
-          <div class="todo-item-header">
-            <label class="checkbox-container">
-              <input type="checkbox" />
-              <span class="checkmark"></span>
-            </label>
-            <h4>Купить молоко</h4>
-          </div>
-          <div class="todo-item-footer">
-            <p>3.1.2021 <span>22:16</span></p>
-            <div class="action-button">
-              <img src="./images/white.svg" alt="" />
-              <img src="./images/trashcan.svg" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="todo-item done">
-          <div class="todo-item-header">
-            <label class="checkbox-container">
-              <input type="checkbox" checked />
-              <span class="checkmark"></span>
-            </label>
-            <h4>Купить молоко</h4>
-          </div>
-          <div class="todo-item-footer">
-            <p>3.1.2021 <span>22:16</span></p>
-            <div class="action-button">
-              <img src="./images/white.svg" alt="" />
-              <img src="./images/trashcan.svg" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <script src="./script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+      <br>
+      <p><a href="{% url 'test' %}" class="btn btn-primary btn-lg">Todo проект</a></p>
+      <hr>
+      <p><a href="{% url 'bookstore'%}" class="btn btn-success btn-lg">BookStore проект</a></p>
+    </div>
+</body>
 </html>
