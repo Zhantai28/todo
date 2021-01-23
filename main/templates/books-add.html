@@ -11,6 +11,7 @@
         <form method="POST" action="{% url 'book-add-on-the-site'%}">
             {% csrf_token %}
             <div class="mb-3">
+            <br>
             <label class="form-label">Заголовок</label>
             <input type="text" class="form-control" placeholder='Напишите заголовок книги' name="book-title">
             </div>
