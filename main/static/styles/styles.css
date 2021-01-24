@@ -38,13 +38,8 @@ section {
   border: 1px white #ce93d8;
   box-shadow: 2px 2px 2px 2px #fce4ec;
 }
-.main-page {
-  border: 1px solid black;
-  text-decoration: none;
-  color: white;
-  padding: 4px;
-  border-radius: 0.25rem;
-  background-color: black;
+.logo {
+  margin-left: 130px;
 }
 .todo-container {
   padding: 30px 20px;
@@ -55,7 +50,7 @@ section {
 }
 .todo-item {
   border: 1px solid gray;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 24%;
   padding: 10px 15px;
   background-color: #c8e6c9;
@@ -90,6 +85,9 @@ section {
 
 .todo-item-header h4 a {
   text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .todo-item-footer {
